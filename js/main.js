@@ -62,13 +62,26 @@ const obstaclesArr = [];
 setInterval(()=>{
     const newObstacle = new Obstacle()
     obstaclesArr.push(newObstacle);
-},2000)
+},3000)
 
 setInterval(()=>{
     obstaclesArr.forEach((ob)=>{
         ob.moveDown();
+
+             // detect collision
+             if (
+              player.positionX < ob.positionX + ob.width &&
+              player.positionX + player.width > ob.positionX &&
+              player.positionY < ob.positionY + ob.height &&
+              player.positionY + player.height > ob.positionY
+          ) {
+              //colision detected
+              //console.log('game over')
+              location.href = "./gameOver.html"
+          }
+
     })
-},100)
+},50)
 
 
 

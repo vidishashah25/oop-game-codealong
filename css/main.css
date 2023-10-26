@@ -19,3 +19,8 @@ body {
     position: absolute;
    
 }
+
+#page-gameover{
+    text-align: center;
+    background-color: aliceblue;
+}
