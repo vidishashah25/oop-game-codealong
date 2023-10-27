@@ -1,5 +1,8 @@
 body {
-    background-color: #ddd;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color: #ddd;*/
 }
 
 
@@ -7,15 +10,16 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 #player{
-    background-color: limegreen;
+    background-color: rgb(99, 181, 148);
     position: absolute;
 }
 
 .obstacle{
-    background-color: purple;
+    background-color: orange;
     position: absolute;
    
 }
