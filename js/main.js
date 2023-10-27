@@ -1,11 +1,10 @@
 class Player {
   constructor() {
     //initialize properties
-    this.positionX = 0;
-    this.positionY = 0;
-    this.height = 20;
     this.width = 20;
-
+    this.height = 10;
+    this.positionY = 0;
+    this.positionX = 50 - (this.width / 2);
     //dom manipulation to reflect initial values (size, position)
     this.playerElm = document.getElementById("player");
     this.playerElm.style.width = this.width + "vw";
@@ -25,10 +24,11 @@ class Player {
 
 class Obstacle {
   constructor() {
-    this.positionX = 50;
-    this.positionY = 90;
-    this.height = 10;
     this.width = 30;
+    this.height = 10;
+    this.positionX = Math.floor(Math.random()*(100 - this.width + 1));
+    this.positionY = 90;
+    
     this.obstacleElm = null;
     this.createDomElement();  
     }
@@ -77,7 +77,7 @@ setInterval(()=>{
           ) {
               //colision detected
               //console.log('game over')
-              location.href = "./gameOver.html"
+             // location.href = "./gameOver.html"
           }
 
     })
